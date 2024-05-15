@@ -1,0 +1,26 @@
+/* Hide scrollbar track */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+}
+
+/* Thin scrollbar */
+body::-webkit-scrollbar {
+    width: 6px; /* width of the scrollbar */
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: transparent; /* color of the track */
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: transparent; /* color of the thumb */
+    border-radius: 3px; /* roundness of the thumb */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2); /* color of the thumb on hover */
+}
