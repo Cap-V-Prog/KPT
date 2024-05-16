@@ -5,46 +5,36 @@
     <title>KnowMorePortugal</title>
     <link rel="stylesheet" type="text/css" href="src/CSS/main.css">
     <link rel="stylesheet" href="src/CSS/webkit.css">
+    <script src="src/JS/map.js"></script>
+    <script src="src/JS/anim.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="section1">
         <h1 class="big-title">Portugal</h1>
-        <p class="small-text">Your small text goes here.</p>
+        <p class="small-text">Portugal, onde o sol brilha sobre colinas históricas e o mar abraça a costa com ternura. Das ruas de paralelepípedos de Lisboa às aldeias de pedra da Serra da Estrela, cada canto é uma história viva de coragem e descoberta. Entre azulejos centenários e vinhedos dourados, o país cativa com sua simplicidade e riqueza cultural. Em Portugal, cada visita é uma jornada de inspiração e encanto, onde o passado e o presente se entrelaçam, prometendo um futuro cheio de possibilidades.</p>
+
         <img src="src/img/Belem_tower_in_lisbon_portugal-Nature_HD_Wallpaper_1366x768.jpg" class="image"/>
         <nav class="navbar" id="navbar">
-            <a href="#" >Link 2</a>
-            <a href="#" >Link 2</a>
-            <a href="#" >Link 2</a>
+            <a href="#section1" >Rios</a>
+            <a href="#section2" >Cidades</a>
+            <a href="#" >Campo</a>
             <h1>PORTUGAL</h1>
-            <a href="#" >Link 2</a>
-            <a href="#" >Link 2</a>
-            <a href="#" >Link 2</a>
+            <a href="#" >Mar</a>
+            <a href="#" >Animais</a>
+            <a href="#" >Desportos</a>
         </nav>
     </div>
-    <div>
-        <h2>MACACOS</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <div class="container big-container" style="background-color: #172937" id="section2">
+        <div class="left-column">
+            <object id="map" type="image/svg+xml" data="src/img/map.svg"></object>
+        </div>
+        <div class="right-column">
+            <div id="district-info">
+            </div>
+        </div>
+    </div>
+    <div class="container big-container" style="background-image: none" id="section3">
+
     </div>
 </body>
-
-<script src="src/JS/anim.js"></script>
 </html>

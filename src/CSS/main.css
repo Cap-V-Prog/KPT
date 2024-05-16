@@ -8,15 +8,16 @@ body{
     left: 0;
     right: 0;
     margin: 0 15%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
     color: white;
-    font-family: Montserrat,serif;
+    font-family: Montserrat, sans-serif;
     font-weight: bold;
     display: flex;
     align-items: center;
     border-radius: 15px;
     transition: all 0.3s ease;
     transform: translateY(0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar.hidden {
@@ -34,7 +35,7 @@ body{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 72px; /* Adjust as needed */
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
     transition: font-size 0.3s, top 0.3s; /* Add transition */
@@ -46,17 +47,22 @@ body{
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 24px; /* Adjust as needed */
-    font-family: Montserrat;
-    text-align: center;
+    font-size: 26px; /* Adjust as needed */
+    font-family: Montserrat, sans-serif;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s, top 0.5s ease; /* Add transition */
+    background-color: rgba(0, 0, 0, 0.15);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    padding: 15px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-
 
 .navbar h1{
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
 
 .navbar a{
@@ -70,16 +76,106 @@ body{
 
 .navbar a:hover{
     background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.05);
 }
 
 .container {
     position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.big-container {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url('https://as2.ftcdn.net/v2/jpg/07/22/75/39/1000_F_722753989_ZZDleCBOn53XJSlrRVBKnLH1E0hdtycB.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.small-container {
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .image {
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
     border: none;
 }
+
+.left-column {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column {
+    width: 50%;
+    justify-content: center;
+
+}
+
+#map {
+    width: auto;
+    height: 90vh;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#district-info {
+    margin-top: 5vh; /* Reduced margin for better alignment */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    border-radius: 10px; /* Increased border radius for smoother edges */
+    opacity: 0;
+    transform: translateY(50px); /* Slightly adjusted initial position */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7); /* Added shadow for depth */
+    max-width: 400px; /* Set a maximum width to avoid excessive stretching */
+    color: white; /* White text color for better visibility */
+    font-family: Montserrat, sans-serif; /* Consistent font family */
+    font-size: 16px; /* Adjusted font size for better readability */
+    line-height: 1.6; /* Increased line height for improved legibility */
+}
+
+#district-info p {
+    margin: 0; /* Reset default margin for paragraphs */
+}
+
+.big-container {
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.polaroid {
+    position: absolute;
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    transform-origin: top left;
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+
