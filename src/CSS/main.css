@@ -315,10 +315,12 @@ body{
     line-height: 1.5;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: justify;
 }
 
 .modality-icon {
     margin-top: 10px; /* Space between the text and the icon */
+    align-content: center
 }
 
 .modality-icon img {
