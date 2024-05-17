@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         districtInfo.innerHTML = "";
 
         // Create and append district name
-        const districtNameElement = document.createElement("h2");
+        const districtNameElement = document.createElement("h1");
         districtNameElement.textContent = districtData.name;
         districtInfo.appendChild(districtNameElement);
 

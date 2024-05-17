@@ -82,7 +82,8 @@ body{
 .container {
     position: relative;
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center;
+    background-color: transparent;
 }
 
 .big-container {
@@ -138,51 +139,55 @@ body{
 }
 
 #district-info {
-    margin-top: 5vh; /* Reduced margin for better alignment */
+    margin-top: 5vh;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
-    border-radius: 10px; /* Increased border radius for smoother edges */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     opacity: 0;
-    transform: translateY(50px); /* Slightly adjusted initial position */
+    transform: translateY(50px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7); /* Added shadow for depth */
-    max-width: 400px; /* Set a maximum width to avoid excessive stretching */
-    color: white; /* White text color for better visibility */
-    font-family: Montserrat, sans-serif; /* Consistent font family */
-    font-size: 16px; /* Adjusted font size for better readability */
-    line-height: 1.6; /* Increased line height for improved legibility */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #district-info p {
-    margin: 0; /* Reset default margin for paragraphs */
+    margin: 0;
 }
 
 .medium-title {
     position: absolute;
-    top: 20px; /* Adjust the top distance as needed */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 50px;
-    font-family: Montserrat, sans-serif; /* Assuming Montserrat is your project font */
-    text-align: center; /* Center horizontally */
-    z-index: 2; /* Ensure the title is above other content */
-    color: white; /* Adjust the color as needed */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .display-line {
     display: flex;
-    justify-content: space-evenly; /* Center the displays horizontally */
-    flex-wrap: wrap; /* Allow the displays to wrap to the next line */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: transparent;
 }
 
 .display {
     position: relative;
     overflow: hidden;
-    width: 415px; /* Set the width of each display to a fixed value */
-    height: 415px; /* Set the height of each display to a fixed value */
-    margin: 25px; /* Add some space between display elements */
+    width: 415px;
+    height: 415px;
+    margin: 25px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
 }
 
 .display-image,
@@ -199,28 +204,45 @@ body{
 .display-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the images maintain aspect ratio and cover the container */
+    object-fit: cover;
 }
 
 .display-text {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
     box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.3s ease;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: justify; /* Justifica o texto */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .display:hover .display-text {
-    opacity: 1; /* Show text on hover */
+    opacity: 1;
+    visibility: visible;
+}
+
+.display-title {
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    align-self: flex-start; /* Alinha o título à esquerda */
+    text-align: left; /* Garante que o texto do título esteja alinhado à esquerda */
+    width: 100%;
+    margin: 0 25px;
 }
 
 .display-text p {
     color: #fff;
-    margin: 0; /* Remove default margin */
+    font-family: Montserrat, sans-serif;
+    margin: 25px;
 }
