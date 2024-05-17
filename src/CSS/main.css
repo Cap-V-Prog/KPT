@@ -246,3 +246,82 @@ body{
     font-family: Montserrat, sans-serif;
     margin: 25px;
 }
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    backdrop-filter: blur(5px); /* Blur the background */
+    z-index: 1; /* Ensure content stays above the background */
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3); /* Slightly opaque background to enhance the blur effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    background: inherit;
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.7;
+}
+
+.profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-text {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.profile-text h2 {
+    margin-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile-text p {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modality-icon {
+    margin-top: 10px; /* Space between the text and the icon */
+}
+
+.modality-icon img {
+    width: 60px; /* Adjust the size of the icon */
+    height: auto;
+}
