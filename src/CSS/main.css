@@ -355,9 +355,6 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
-.river-card p{
-    height: 120px;
-}
 
 .river-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -367,13 +364,15 @@ body{
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #333;
+    color: #2b2b2b;
 }
 
 .river-description {
     font-size: 16px;
+    height: 140px;
     margin-bottom: 20px;
-    color: #666;
+    color: #4c4b4b;
+    text-align: justify;
 }
 
 /* Meter styles */
@@ -391,7 +390,7 @@ body{
 .meter-bar {
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, rgb(12, 107, 166), #2c78ae);
+    background: linear-gradient(90deg, rgb(32, 137, 198), #5caeed);
     border-radius: 10px 10px 0 0;
     width: 0;
     transition: width 2s;
