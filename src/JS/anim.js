@@ -45,3 +45,66 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateMeter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.65 }); // Adjust the threshold as needed
+
+    const riverCards = document.querySelectorAll('.river-card');
+    riverCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Determine the maximum river length
+    let maxLength = 0;
+    riverCards.forEach(card => {
+        const length = parseInt(card.querySelector('.meter-bar').getAttribute('data-length'));
+        if (length > maxLength) {
+            maxLength = length + 50; // Adjusted for better scale visualization
+        }
+    });
+
+    function animateMeter(card) {
+        const fill = card.querySelector('.meter-bar');
+        const length = parseInt(fill.getAttribute('data-length'));
+        const scale = createScale(length, maxLength);
+
+        // Scale width relative to the longest river
+        fill.style.width = (length / maxLength) * 100 + '%';
+        card.querySelector('.meter').appendChild(scale);
+    }
+
+    function createScale(length, maxLength) {
+        const scale = document.createElement('div');
+        scale.className = 'meter-scale';
+
+        // Create markers for every 50km with big markers at 100km
+        for (let i = 0; i <= maxLength; i += 50) {
+            const marker = document.createElement('div');
+            const label = document.createElement('span');
+
+            if (i % 100 === 0) { // Big markers for every 100km
+                marker.className = 'km';
+                label.innerText = i / 100; // Show kilometers
+            } else if (i % 50 === 0) { // Small markers for every 50km
+                marker.className = 'half-km';
+            }
+
+            scale.appendChild(marker);
+            if (label.innerText) {
+                marker.appendChild(label);
+            }
+        }
+        return scale;
+    }
+});
+
+
+
+

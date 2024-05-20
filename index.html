@@ -5,8 +5,12 @@
     <title>KnowMorePortugal</title>
     <link rel="stylesheet" type="text/css" href="src/CSS/main.css">
     <link rel="stylesheet" href="src/CSS/webkit.css">
+    <link rel="stylesheet" href="src/CSS/carousel.css">
+
     <script src="src/JS/map.js"></script>
     <script src="src/JS/anim.js"></script>
+    <script src="src/JS/carousel.js"></script>
+
 </head>
 <body>
     <div class="container" id="section1">
@@ -25,7 +29,7 @@
         </nav>
     </div>
     <div class="container big-container" style="background-color: #172937" id="section2">
-        <h1 class="medium-title">Cidades</h1>
+        <h1 class="medium-title" style="color: white">Cidades</h1>
         <div class="left-column">
             <object id="map" type="image/svg+xml" data="src/img/map.svg"></object>
         </div>
@@ -122,7 +126,7 @@
     </div>
     <div class="big-container" style="height: auto; padding-top: 15px" id="section4">
         <div style="align-items: center">
-            <h1 style="margin-bottom: 35px; display: flex;justify-content: center; font-family: Montserrat, sans-serif; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.55)">Desporto</h1>
+            <h1 style="margin-bottom: 35px; display: flex;font-size: 50px; justify-content: center; font-family: Montserrat, sans-serif; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.55)">Desporto</h1>
         </div>
         <div class="profile-section" style="background-image: url('https://i0.wp.com/motojornal.pt/wp-content/uploads/2023/02/Miguel-Oliveira-4-2.jpg?fit=2250%2C1500&ssl=1');">
             <div class="profile-container">
@@ -211,6 +215,79 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/2560px-Olympic_rings_without_rims.svg.png" alt="Olimpics Icon">
                         <img style="margin-left: 10px; width: 20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Gold_medal.svg/20px-Gold_medal.svg.png" alt="Olimpics Icon">
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="section5">
+        <h1 class="medium-title" style="top: 5px; color: #082237">Rios de Portugal</h1>
+        <div class="river-container" style="padding-top: 50px" id="river-container">
+            <div class="river-card">
+                <h2 class="river-name">Rio Tejo</h2>
+                <p class="river-description">O Rio Tejo, conhecido como o "Rio da cidade", é um dos principais rios da Península Ibérica. Nasce em Espanha, percorre cerca de 1.007 quilómetros e desagua no Oceano Atlântico, perto de Lisboa, Portugal. É essencial para o transporte e sustenta uma rica biodiversidade, mas enfrenta desafios ambientais como a poluição. O Tejo é um símbolo da história, cultura e natureza da região.</p>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://visitportugalbirdwatching.com/files/490/Tejo_internacional.jpg" alt="Rio Tejo 1">
+                        <img src="https://live.staticflickr.com/4151/5094920594_96d7745c24_b.jpg" alt="Rio Tejo 2">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2c/f5/00.jpg" alt="Rio Tejo 3">
+                    </div>
+                    <button class="carousel-prev"><img style="width: 20px; height: 20px;" src="src/img/left-arrow-svgrepo-com.svg" alt="left"></button>
+                    <button class="carousel-next"><img style="width: 20px; height: 20px;" src="src/img/right-arrow-svgrepo-com%20(1).svg" alt="left"></button>
+                </div>
+                <div class="meter">
+                    <div class="meter-bar" data-length="1007"></div>
+                    <div class="meter-scale"></div>
+                </div>
+            </div>
+            <div class="river-card">
+                <h2 class="river-name">Rio Douro</h2>
+                <p class="river-description">O Rio Douro, famoso por suas encostas vinícolas e pelo Vinho do Porto, é um dos principais rios de Portugal. Nasce em Espanha, percorre 897 quilómetros e deságua no Atlântico, perto do Porto. Apesar dos desafios ambientais, o Douro é uma fonte de orgulho cultural e econômico para a região.</p>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://visitportugalbirdwatching.com/files/490/Tejo_internacional.jpg" alt="Rio Tejo 1">
+                        <img src="https://live.staticflickr.com/4151/5094920594_96d7745c24_b.jpg" alt="Rio Tejo 2">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2c/f5/00.jpg" alt="Rio Tejo 3">
+                    </div>
+                    <button class="carousel-prev"><img style="width: 20px; height: 20px;" src="src/img/left-arrow-svgrepo-com.svg" alt="left"></button>
+                    <button class="carousel-next"><img style="width: 20px; height: 20px;" src="src/img/right-arrow-svgrepo-com%20(1).svg" alt="left"></button>
+                </div>
+                <div class="meter">
+                    <div class="meter-bar" data-length="897"></div>
+                    <div class="meter-scale"></div>
+                </div>
+            </div>
+            <div class="river-card">
+                <h2 class="river-name">Rio Guadiana</h2>
+                <p class="river-description">O Rio Guadiana, com 744 km de comprimento, é um dos principais rios da Península Ibérica.</p>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://visitportugalbirdwatching.com/files/490/Tejo_internacional.jpg" alt="Rio Tejo 1">
+                        <img src="https://live.staticflickr.com/4151/5094920594_96d7745c24_b.jpg" alt="Rio Tejo 2">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2c/f5/00.jpg" alt="Rio Tejo 3">
+                    </div>
+                    <button class="carousel-prev"><img style="width: 20px; height: 20px;" src="src/img/left-arrow-svgrepo-com.svg" alt="left"></button>
+                    <button class="carousel-next"><img style="width: 20px; height: 20px;" src="src/img/right-arrow-svgrepo-com%20(1).svg" alt="left"></button>
+                </div>
+                <div class="meter">
+                    <div class="meter-bar" data-length="744"></div>
+                    <div class="meter-scale"></div>
+                </div>
+            </div>
+            <div class="river-card">
+                <h2 class="river-name">Rio Guadiana</h2>
+                <p class="river-description">O Rio Guadiana, com 744 km de comprimento, é um dos principais rios da Península Ibérica.</p>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://visitportugalbirdwatching.com/files/490/Tejo_internacional.jpg" alt="Rio Tejo 1">
+                        <img src="https://live.staticflickr.com/4151/5094920594_96d7745c24_b.jpg" alt="Rio Tejo 2">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2c/f5/00.jpg" alt="Rio Tejo 3">
+                    </div>
+                    <button class="carousel-prev"><img style="width: 20px; height: 20px;" src="src/img/left-arrow-svgrepo-com.svg" alt="left"></button>
+                    <button class="carousel-next"><img style="width: 20px; height: 20px;" src="src/img/right-arrow-svgrepo-com%20(1).svg" alt="left"></button>
+                </div>
+                <div class="meter">
+                    <div class="meter-bar" data-length="744"></div>
+                    <div class="meter-scale"></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <!-- Include Slick theme CSS (optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <!-- Include jQuery (required for Slick) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include Slick JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Your custom styles (optional) -->
+    <style>
+        /* Add any custom styles for your carousel here */
+        .slick-slide {
+            margin: 0 10px;
+        }
+        /* Customize arrows */
+        .slick-prev:before, .slick-next:before {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="carousel">
+    <div><img src="image1.jpg" alt="Image 1"></div>
+    <div><img src="image2.jpg" alt="Image 2"></div>
+    <div><img src="image3.jpg" alt="Image 3"></div>
+    <!-- Add more slides as needed -->
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.carousel').slick({
+            autoplay: true, // Set to true if you want the carousel to autoplay
+            autoplaySpeed: 2000, // Set the autoplay speed in milliseconds
+            arrows: true, // Set to true to display arrows for navigation
+            dots: true, // Set to true to display navigation dots
+            infinite: true, // Set to true to make the carousel loop infinitely
+            speed: 500, // Set the animation speed in milliseconds
+            slidesToShow: 3, // Set the number of slides to show at once
+            slidesToScroll: 1 // Set the number of slides to scroll at a time
+        });
+    });
+</script>
+</body>
+</html>

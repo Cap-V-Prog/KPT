@@ -1,5 +1,6 @@
 body{
     margin:0px;
+    font-family: Montserrat, sans-serif;
 }
 
 .navbar{
@@ -93,7 +94,7 @@ body{
     background-image: url('https://as2.ftcdn.net/v2/jpg/07/22/75/39/1000_F_722753989_ZZDleCBOn53XJSlrRVBKnLH1E0hdtycB.jpg');
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 75px black;
+    box-shadow: inset 0px 0px 20px 7px black;
 }
 
 .auto-container{
@@ -164,7 +165,7 @@ body{
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 50px;
+    font-size: 36px;
     font-family: Montserrat, sans-serif;
     text-align: center;
     z-index: 2;
@@ -268,6 +269,12 @@ body{
     background: rgba(255, 255, 255, 0.3); /* Slightly opaque background to enhance the blur effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-container:hover{
+    background: rgba(158, 158, 158, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .profile-container::before {
@@ -320,10 +327,110 @@ body{
 
 .modality-icon {
     margin-top: 10px; /* Space between the text and the icon */
-    align-content: center
+    align-content: center;
+    align-items: center;
 }
 
 .modality-icon img {
     width: 60px; /* Adjust the size of the icon */
     height: auto;
 }
+
+/* Section 5 */
+#section5 {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.river-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.river-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.river-card p{
+    height: 120px;
+}
+
+.river-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.river-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.river-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Meter styles */
+.meter {
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    height: 35px;
+    background: #e0e0e0;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.meter-bar {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(12, 107, 166), #2c78ae);
+    border-radius: 10px 10px 0 0;
+    width: 0;
+    transition: width 2s;
+}
+
+.meter-scale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.meter-scale div {
+    height: 80%;
+    width: 3px;
+    background: black;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.meter-scale .km {
+    height: 80%;
+}
+
+.meter-scale .half-km {
+    height: 35%;
+}
+
+.meter-scale span {
+    position: absolute;
+    top: 4px;
+    color: black;
+    transform: translateX(5px);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+

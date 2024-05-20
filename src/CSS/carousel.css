@@ -1,0 +1,56 @@
+/* Carousel styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 300%;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.1s;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-next img{
+    filter: invert(1);
+}
+.carousel-prev img{
+    filter: invert(1);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    transform: scale(1.2) translateY(-40%);
+}
