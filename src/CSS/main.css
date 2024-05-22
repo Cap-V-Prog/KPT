@@ -94,7 +94,7 @@ body{
     background-image: url('https://as2.ftcdn.net/v2/jpg/07/22/75/39/1000_F_722753989_ZZDleCBOn53XJSlrRVBKnLH1E0hdtycB.jpg');
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0px 0px 20px 7px black;
+    box-shadow: inset 0 0 20px 7px black;
 }
 
 .auto-container{
@@ -384,7 +384,6 @@ body{
     border-radius: 10px 10px 0 0;
     margin-top: 20px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
 }
 
 .meter-bar {
@@ -430,6 +429,27 @@ body{
     color: black;
     transform: translateX(5px);
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.meter-label {
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.river-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.flag {
+    width: 20px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 
